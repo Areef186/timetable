@@ -55,6 +55,19 @@
         .header .day {
             grid-column: auto;
         }
+        .save-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .save-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -131,7 +144,30 @@
         <textarea class="subject" placeholder="Subject"></textarea>
         <textarea class="subject" placeholder="Subject"></textarea>
     </div>
+    <button class="save-btn" onclick="saveTimetable()">Save</button>
 </div>
+
+<script>
+    function saveTimetable() {
+        const subjects = document.querySelectorAll('.subject');
+        const timetableData = Array.from(subjects).map(subject => subject.value);
+        localStorage.setItem('timetableData', JSON.stringify(timetableData));
+        alert('Timetable saved successfully!');
+    }
+
+    function loadTimetable() {
+        const savedData = localStorage.getItem('timetableData');
+        if (savedData) {
+            const timetableData = JSON.parse(savedData);
+            const subjects = document.querySelectorAll('.subject');
+            subjects.forEach((subject, index) => {
+                subject.value = timetableData[index] || '';
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTimetable);
+</script>
 
 </body>
 </html>
