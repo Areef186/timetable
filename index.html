@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timetable Notepad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .timetable {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+        .day, .time-slot {
+            background-color: #e9ecef;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .subject, .notes {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+            resize: none;
+        }
+        .time-slot {
+            grid-column: 1;
+        }
+        .day {
+            grid-column: span 1;
+        }
+        .header {
+            grid-column: 1 / span 6;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+        .header .day {
+            grid-column: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Study Timetable</h1>
+    <div class="timetable">
+        <div class="header">
+            <div class="time-slot">Time</div>
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+            <div class="day">Friday</div>
+        </div>
+        <div class="time-slot">8:00 - 9:00 AM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">9:00 - 10:00 AM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">10:00 - 11:00 AM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">11:00 - 12:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">12:00 - 1:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">1:00 - 2:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">2:00 - 3:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">3:00 - 4:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">4:00 - 5:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <div class="time-slot">5:00 - 6:00 PM</div>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+        <textarea class="subject" placeholder="Subject"></textarea>
+    </div>
+</div>
+
+</body>
+</html>
